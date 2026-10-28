@@ -7,7 +7,6 @@ def cryptic_sorter(strings: list[str]) -> list[str]:
     result = []
     for string in strings:
         i = len(result)
-        # Scan backward until reaching an element that is <= the current string's key
         while i > 0 and _key(result[i - 1]) > _key(string):
             i -= 1
         result.insert(i, string)
